@@ -1,0 +1,23 @@
+Study software list:
+	* mail clinet: mutt, notmuch, alpine
+	* browser: w3m, lynx
+	* editor: !emacs, !vim, nano
+	* proc words: wordgrinder
+	* music player: cmus
+	* QQ: Pidgin
+	* pull doc: rainbowstream
+	* Reddit new: rtv
+	* proc manager: htop
+	* manager files: Midnight Commander
+	* manager windows: tmux, GNU Screen
+	* runing papper: tpp
+
+Custom software:
+	# mutt: mail client
+	# msmtp: send mail client
+	# w3m: browser
+	# vim: editor
+	# cmus: c music player
+	# htop: proc manager
+	# tmux: windows manager
+	
