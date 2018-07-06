@@ -47,6 +47,7 @@ Key F3 A A Module FvwmConsole -terminal rxvt -geometry \
 	45x5-0+0 -bg gold -fg midnightblue
 Key Tab A M WindowList Root c c NoDeskSort
 Key t A CM Exec exec xterm
+Key Space W M Menu Window-Ops2 Close
 
 # mouse bindings:
 Mouse 1	R   	A       Menu RootMenu Nop
