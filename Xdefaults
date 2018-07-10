@@ -1,0 +1,18 @@
+! Xterm settings
+! copy &amp; paste
+xterm*VT100.translations: #override &lt;Btn1Up&gt;: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+  
+   
+! English font
+xterm*faceName: DejaVu Sans Mono:antialias=True:pixelsize=13
+! Chinese font
+! xterm*faceNameDoublesize:WenQuanYi Zen Hei Mono:antialias=True:pixelsize=13
+ 
+     
+! input method
+xterm*inputMethod:ibus
+
+! scrollbar
+xterm*scrollBar: true
+xterm*rightScrollBar: true
+xterm*SaveLines: 4096
