@@ -1,0 +1,21 @@
+[chromium-el6]
+name=CentOS-$releasever - Chromium EL6
+baseurl=http://people.centos.org/hughesjr/chromium/6/$basearch/
+gpgcheck=1
+enabled=1
+gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-Testing-6
+
+[chromium-el6-Source]
+name=CentOS-$releasever - Chromium EL6 - Source
+baseurl=http://people.centos.org/hughesjr/chromium/6/SRPMS/
+gpgcheck=1
+enabled=0
+gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-Testing-6
+
+[chromium-el6-debug]
+name=CentOS-$releasever - Chromium EL6 - Debug
+baseurl=http://people.centos.org/hughesjr/chromium/6/debug/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-Testing-6
+
