@@ -16,16 +16,17 @@ Style * IconFont \
 Style * ForeColor #FFFFFF, BackColor #000000
 Style * HilightFore #FFFFFF, HilightBack #000000
 Style * BorderWidth 5, HandleWidth 5 
+Style * !Title
 
 Style	"*"	FvwmBorder  # MWMBorder
 Style	"*"	FvwmButtons
 BorderStyle	Inactive -- HiddenHandles NoInset
 BorderStyle	Active -- HiddenHandles NoInset
-TitleStyle	Height 17
-TitleStyle	ActiveUp (solid black -- Flat)
-TitleStyle	ActiveDown (solid black -- Flat)
-TitleStyle	Inactive (solid grey51 -- Flat)
-TitleStyle	LeftJustified
+#TitleStyle	Height 17
+#TitleStyle	ActiveUp (solid black -- Flat)
+#TitleStyle	ActiveDown (solid black -- Flat)
+#TitleStyle	Inactive (solid grey51 -- Flat)
+#TitleStyle	LeftJustified
 ButtonStyle	1	MiniIcon (-- flat)
 ButtonStyle	all	-- UseTitleStyle Flat
 ButtonStyle 2 17 20x20@1 30x20@1 50x40@1 70x20@1 80x20@1 80x30@0 60x50@0 80x70@1 80x80@0 70x80@0 50x60@0 30x80@0 20x80@0 20x70@0 40x50@1 20x30@0 20x20@1
