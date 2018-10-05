@@ -1,0 +1,57 @@
+"自动缩进
+set autoindent
+"智能缩进
+set smartindent
+"C-style 缩进
+set cindent
+"显示行号
+set number
+"制表符(tab)的宽度
+set tabstop=4
+"设置移位操作>>或<<的缩进长度
+set shiftwidth=4
+"用空格代替tab
+"set expandtab
+"文本长度超过后自动换行
+set textwidth=80
+"窗口右侧向左数的列数来自动换行
+"set wrapmargin=2
+"高亮匹配的括号
+set showmatch
+"高亮搜索匹配的位置
+set hlsearch
+"搜索过程中动态显示匹配的内容
+set incsearch
+"搜索时忽略大小写
+set ignorecase
+"智能区分大小写
+"set smartcase
+"光标窗口中上下保留5行
+"set scrolloff=5
+"底部永久显示状态栏
+set laststatus=2
+"英语拼写检查
+"set spell spelllang=en_us
+"不需要备份文件
+set nobackup
+"不需要交换文件
+set noswapfile
+"自动切换目录至当前文件的目录
+set autochdir
+"维护编辑历史记录
+set undofile
+"错误响铃
+set errorbells
+"错误视觉提示
+set visualbell
+"高亮显示光标所在的行
+set cursorline
+"显示当前模式
+set showmode
+"语法开关
+syntax on
+"设置主题
+set background=darkcolorscheme solarized
+
+"树形目录
+Plug 'scrooloose/nerdtree'Plug 'jistr/vim-nerdtree-tabs'Plug 'Xuyuanp/nerdtree-git-plugin'autocmd vimenter * NERDTreemap <C-n> :NERDTreeToggle<CR>let NERDTreeShowHidden=1let g:NERDTreeShowIgnoredStatus = 1let g:nerdtree_tabs_open_on_console_startup=1let g:NERDTreeIndicatorMapCustom = {     "Modified"  : "*",     "Staged"    : "?",     "Untracked" : "?",     "Renamed"   : "?",     "Unmerged"  : "═",     "Deleted"   : "?",     "Dirty"     : "?",     "Clean"     : "??",     'Ignored'   : '?',     "Unknown"   : "?"}
