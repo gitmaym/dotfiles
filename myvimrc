@@ -51,7 +51,7 @@ set showmode
 "语法开关
 syntax on
 "设置主题
-set background=darkcolorscheme solarized
+"set background=darkcolorscheme solarized
+"设置删除键
+set backspace=indent,eol,start
 
-"树形目录
-Plug 'scrooloose/nerdtree'Plug 'jistr/vim-nerdtree-tabs'Plug 'Xuyuanp/nerdtree-git-plugin'autocmd vimenter * NERDTreemap <C-n> :NERDTreeToggle<CR>let NERDTreeShowHidden=1let g:NERDTreeShowIgnoredStatus = 1let g:nerdtree_tabs_open_on_console_startup=1let g:NERDTreeIndicatorMapCustom = {     "Modified"  : "*",     "Staged"    : "?",     "Untracked" : "?",     "Renamed"   : "?",     "Unmerged"  : "═",     "Deleted"   : "?",     "Dirty"     : "?",     "Clean"     : "??",     'Ignored'   : '?',     "Unknown"   : "?"}
