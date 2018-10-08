@@ -51,7 +51,8 @@ set showmode
 "语法开关
 syntax on
 "设置主题
-"set background=darkcolorscheme solarized
+set background=dark
+"colorscheme solarized
 "设置删除键
 set backspace=indent,eol,start
 

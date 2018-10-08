@@ -1,0 +1,146 @@
+"自动缩进
+set autoindent
+set encoding=utf-8
+"智能缩进
+set smartindent
+"C-style 缩进
+set cindent
+"显示行号
+set number
+"制表符(tab)的宽度
+set tabstop=4
+"设置移位操作>>或<<的缩进长度
+set shiftwidth=4
+"用空格代替tab
+"set expandtab
+"文本长度超过后自动换行
+set textwidth=80
+"窗口右侧向左数的列数来自动换行
+"set wrapmargin=2
+"高亮匹配的括号
+set showmatch
+"高亮搜索匹配的位置
+set hlsearch
+"搜索过程中动态显示匹配的内容
+set incsearch
+"搜索时忽略大小写
+set ignorecase
+"智能区分大小写
+"set smartcase
+"光标窗口中上下保留5行
+"set scrolloff=5
+"底部永久显示状态栏
+set laststatus=2
+"英语拼写检查
+"set spell spelllang=en_us
+"不需要备份文件
+set nobackup
+"不需要交换文件
+set noswapfile
+"自动切换目录至当前文件的目录
+set autochdir
+"维护编辑历史记录
+set undofile
+"错误响铃
+set errorbells
+"错误视觉提示
+set visualbell
+"高亮显示光标所在的行
+set cursorline
+"显示当前模式
+set showmode
+"语法开关
+syntax on
+"设置主题
+set background=dark
+"colorscheme solarized
+"设置删除键
+set backspace=indent,eol,start
+
+"插件
+source ~/.vim/autoload/plug.vim
+call plug#begin('~/.vim/plugged')
+"树形插件
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+"autocmd vimenter * NERDTreemap <C-n> : NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+let g:NERDTreeShowIgnoredStatus =1
+let g:nerdtree_tabs_open_on_console_startup=1
+let g:NERDTreeIndicatorMapCustom ={"Modified":"*","Staged": "+","Untracked":"★ ","Renamed":"->","Unmerged":"═","Deleted":"×","Dirty":"×","Clean":"√",'Ignored':'匚',"Unknown":"?"}
+"代码补全
+"Plug 'Valloric/YouCompleteMe'
+"Plug 'Raimondi/delimitMate'
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"语法高亮，检查
+"Plug 'sheerun/vim-polyglot'
+"Plug 'w0rp/ale'
+"let g:ale_linters = {    'javascript': ['eslint'],    'css': ['stylelint'],}
+"let g:ale_fixers = {    'javascript': ['eslint'],    'css': ['stylelint'],}
+"let g:ale_fix_on_save = 1
+"let g:ale_sign_column_always = 1
+"let g:ale_sign_error = '●'
+"let g:ale_sign_warning = '▶'
+"nmap <silent> <C-k> <Plug>(ale_previous_wrap)nmap <silent> <C-j> <Plug>(ale_next_wrap)
+"文件，代码搜索
+"Plug 'rking/ag.vim'
+"Plug 'kien/ctrlp.vim'
+"加强版状态栏
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+"let g:airline_theme='papercolor'
+"代码注释
+"Plug 'scrooloose/nerdcommenter' 
+"# <leader> cc
+" 注释# <leader>cm 只用一组符号注释# <leader>cA 在行尾添加注释# <leader>c$ /* 注释 */# <leader>cs /* 块注释 */# <leader>cy 注释并复制# <leader>c<space> 注释/取消注释# <leader>ca 切换　// 和 /* */# <leader>cu 取消注释
+"let g:NERDSpaceDelims = 1
+"let g:NERDDefaultAlign = 'left'
+"let g:NERDCustomDelimiters = {'javascript': { 'left': '//', 'leftAlt': '/**', 'rightAlt': '*/' },'less': { 'left': '/**', 'right': '*/'}}
+"git
+"Plug 'airblade/vim-gitgutter'
+"Plug 'tpope/vim-fugitive'
+"Markdown
+"Plug 'suan/vim-instant-markdown'
+"let g:instant_markdown_slow = 1
+"let g:instant_markdown_autostart = 0 " :InstantMarkdownPreview
+"Emmet
+"Plug 'mattn/emmet-vim'
+"let g:user_emmet_leader_key='<Tab>'
+"let g:user_emmet_settings = {'javascript.jsx':{'extends' : 'jsx',},}
+"html5
+"Plug 'othree/html5.vim'
+"css3
+"Plug 'hail2u/vim-css3-syntax'
+"Plug 'ap/vim-css-color'
+"augroup VimCSS3Syntax autocmd!  autocmd FileType css setlocal iskeyword+=-augroup END
+"javascipt
+"Plug 'pangloss/vim-javascript'
+"let g:javascript_plugin_jsdoc = 1
+"let g:javascript_plugin_ngdoc = 1
+"let g:javascript_plugin_flow = 1
+"set foldmethod=syntax
+"let g:javascript_conceal_function             = "ƒ"
+"let g:javascript_conceal_null                 = "ø"
+"let g:javascript_conceal_this                 = "@"
+"let g:javascript_conceal_return               = "⇚"
+"let g:javascript_conceal_undefined            = "¿"
+"let g:javascript_conceal_NaN                  = "ℕ"
+"let g:javascript_conceal_prototype            = "¶"
+"let g:javascript_conceal_static               = "•"
+"let g:javascript_conceal_super                = "Ω"
+"let g:javascript_conceal_arrow_function       = "⇒"
+"let g:javascript_conceal_noarg_arrow_function = " "
+"let g:javascript_conceal_underscore_arrow_function = " "
+"set conceallevel=1
+"React
+"Plug 'mxw/vim-jsx'
+"let g:jsx_ext_required = 0
+"Prettier
+"Plug 'prettier/vim-prettier', {'do':'yarn install','for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+"let g:prettier#config#bracket_spacing = 'true'
+"let g:prettier#config#jsx_bracket_same_line = 'false'
+"let g:prettier#autoformat = 0
+"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
+"# :Prettier
+call plug#end()
